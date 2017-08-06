@@ -15,3 +15,10 @@ function getText(){
   }
 
 }
+
+function handle(e){
+  if(e.keycode == 13 || e.which == 13){
+    
+    getText();
+  }
+}
