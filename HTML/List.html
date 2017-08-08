@@ -18,7 +18,7 @@
       <ul  id="todo-list">
         <li v-for="todo in todoList">
             {{todo.todoItem}}
-            <button v-bind:id="todo.key" v-on:click="deleteItem">Delete</button>
+            <button v-bind:id="todo.key" v-on:click="deleteItem()">Delete</button>
         </li>
       </ul>
 

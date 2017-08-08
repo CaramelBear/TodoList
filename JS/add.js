@@ -16,7 +16,7 @@ var app = new Vue({
 
     },
     deleteItem:function(){
-      deleteTodo();
+      deleteTodo(event);
     },
     deleteAll:function(){
       deleteAllTodos();
@@ -32,12 +32,19 @@ function clearInput(){
 function insertTodo(){
   var inputField = document.getElementById('input-field').value;
   if(inputField !== ""){
-    listOfTodos.unshift({'todoItem':inputField,'key':"button-ID_"+deleteButtonNumber});
+    listOfTodos.unshift({'todoItem':inputField,'key':"button_ID_"+deleteButtonNumber});
     deleteButtonNumber++;
   }
 }
 
-function deleteTodo(){
+function deleteTodo(event){
+  var buttonID = event.currentTarget.id;
+  var child = document.getElementById(buttonID);
+  var text = child.parentElement.innerText;
+  text = text.trim();
+  console.log(text);
+  console.log(text.length);
+  console.log(text.substring(0,text.length-6).trim());
 
 }
 
