@@ -2,7 +2,6 @@ var todoText = "Please Enter a Todo:";
 var listOfTodos = [];
 
 
-
 var app = new Vue({
   el: "#master-container",
   data:{
@@ -13,7 +12,12 @@ var app = new Vue({
     add: function(){
       insertTodo();
       clearInput();
+
+    },
+    deleteItem:function(){
+      listOfTodos.shift();
     }
+
   }
 });
 
@@ -24,7 +28,7 @@ function clearInput(){
 function insertTodo(){
   var inputField = document.getElementById('input-field').value;
   if(inputField !== ""){
-    listOfTodos.push({'todoItem':inputField});
+    listOfTodos.unshift({'todoItem':inputField});
     console.log(listOfTodos);
   }
 }

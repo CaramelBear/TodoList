@@ -17,13 +17,15 @@
 
       <ul  id="todo-list">
         <li v-for="todo in todoList">
-            {{todo.todoItem}}
+            {{todo.todoItem}}<button v-on:click="deleteItem">Delete</button>
         </li>
       </ul>
 
     </div>
 
   </body>
+
   <script src="https://unpkg.com/vue"></script>
   <script src="../JS/add.js"></script>
+
 </html>
