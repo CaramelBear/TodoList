@@ -15,7 +15,7 @@ var app = new Vue({
 
     },
     deleteItem:function(){
-      listOfTodos.shift();
+      deleteTodo();
     }
 
   }
@@ -29,6 +29,9 @@ function insertTodo(){
   var inputField = document.getElementById('input-field').value;
   if(inputField !== ""){
     listOfTodos.unshift({'todoItem':inputField});
-    console.log(listOfTodos);
   }
+}
+
+function deleteTodo(){
+  listOfTodos.shift();
 }
