@@ -1,5 +1,6 @@
 var todoText = "Please Enter a Todo:";
 var listOfTodos = [];
+var deleteButtonNumber = 0;
 
 
 var app = new Vue({
@@ -16,6 +17,9 @@ var app = new Vue({
     },
     deleteItem:function(){
       deleteTodo();
+    },
+    deleteAll:function(){
+      deleteAllTodos();
     }
 
   }
@@ -28,10 +32,19 @@ function clearInput(){
 function insertTodo(){
   var inputField = document.getElementById('input-field').value;
   if(inputField !== ""){
-    listOfTodos.unshift({'todoItem':inputField});
+    listOfTodos.unshift({'todoItem':inputField,'key':"button-ID_"+deleteButtonNumber});
+    deleteButtonNumber++;
   }
 }
 
 function deleteTodo(){
-  listOfTodos.shift();
+
+}
+
+function deleteAllTodos(){
+  var listLength = listOfTodos.length;
+  for(var i = 0; i<=listLength; i++){
+    listOfTodos.shift();
+  }
+
 }
