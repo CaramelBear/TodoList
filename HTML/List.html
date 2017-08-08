@@ -15,8 +15,10 @@
         <button v-on:click="add" id="add-button">Add</button>
 
 
-      <ul id="todo-list">
-
+      <ul  id="todo-list">
+        <li v-for="todo in todoList">
+            {{todo.todoItem}}
+        </li>
       </ul>
 
     </div>

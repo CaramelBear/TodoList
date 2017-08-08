@@ -1,16 +1,17 @@
 var todoText = "Please Enter a Todo:";
-var todoList = [];
+var listOfTodos = [];
 
 
 
 var app = new Vue({
   el: "#master-container",
   data:{
-    message: todoText
+    message: todoText,
+    todoList: listOfTodos
   },
   methods:{
     add: function(){
-      getInput();
+      insertTodo();
       clearInput();
     }
   }
@@ -20,9 +21,10 @@ function clearInput(){
   document.getElementById("input-field").value = "";
 }
 
-function getInput(){
+function insertTodo(){
   var inputField = document.getElementById('input-field').value;
   if(inputField !== ""){
-    console.log(inputField);
+    listOfTodos.push({'todoItem':inputField});
+    console.log(listOfTodos);
   }
 }
