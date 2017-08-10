@@ -10,7 +10,7 @@
 
         <p>{{message}} </p>
 
-        <input id="input-field" type="text" >
+        <input v-on:keyup.enter="add" id="input-field" type="text" >
 
         <button v-on:click="add" id="add-button">Add</button>
 
@@ -29,6 +29,6 @@
   </body>
 
   <script src="https://unpkg.com/vue"></script>
-  <script src="../JS/add.js"></script>
+  <script src="../JS/main.js"></script>
 
 </html>
