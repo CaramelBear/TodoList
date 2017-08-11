@@ -1,5 +1,4 @@
 # TodoList
-<h1>TodoList App</h1>
 
 <h2>Technologies Used:</h2>
 <ul>
