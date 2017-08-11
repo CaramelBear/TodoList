@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>Sweet Sexy Simple Todo List</title>
   </head>
+  <link rel="stylesheet" href="../CSS/master.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <body>
     <div id="master-container">
 
@@ -13,6 +15,7 @@
         <input autocomplete="off" v-on:keyup.enter="add" id="input-field" type="text" >
 
         <button v-on:click="add" id="add-button">Add</button>
+        <button v-on:click="deleteAll" id="delete-all">Delete All</button>
 
 
       <ul  id="todo-list">
@@ -22,7 +25,7 @@
         </li>
       </ul>
 
-      <button v-on:click="deleteAll" id="delete-all">Delete All</button>
+
 
     </div>
 

@@ -1,6 +1,7 @@
 var todoText = "Please Enter a Todo:";
 var listOfTodos = [];
 var deleteButtonNumber = 0;
+var inputCounter = 0;
 
 
 var app = new Vue({
@@ -11,8 +12,15 @@ var app = new Vue({
   },
   methods:{
     add: function(){
-      insertTodo();
-      clearInput();
+      if(inputCounter < 5){
+        insertTodo();
+        clearInput();
+        inputCounter++;
+      }else{
+        clearInput();
+      }
+
+
 
     },
     deleteItem:function(){
@@ -60,6 +68,7 @@ function deleteTodo(event){
 
     counter ++;
   }
+  inputCounter--;
 
 }
 
@@ -68,5 +77,6 @@ function deleteAllTodos(){
   for(var i = 0; i<=listLength; i++){
     listOfTodos.shift();
   }
+  inputCounter = 0;
 
 }

@@ -1,0 +1,23 @@
+li{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 50px;
+}
+p{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 45px;
+  margin: 0;
+}
+
+div{
+  margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
+
+input{
+  margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
